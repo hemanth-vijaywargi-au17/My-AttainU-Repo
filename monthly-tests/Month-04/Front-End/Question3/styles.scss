@@ -1,0 +1,117 @@
+.navbar {
+  border-bottom: 1px solid lightgrey;
+  padding-top: 0.3rem;
+
+  button {
+    border-radius: 0px;
+    margin-right: 10px;
+    height: 50px;
+    width: 100px;
+  }
+  #search {
+    background-color: hsl(0, 0%, 94%);
+    border-radius: 0px;
+    border: none;
+    &:focus {
+      border: 1px solid black;
+      box-shadow: none;
+      background-color: hsl(0, 0%, 94%);
+    }
+  }
+  #search-container {
+    margin: 0px 20px;
+    flex-grow: 1;
+    button {
+      margin: 0px;
+      width: 120px;
+    }
+  }
+  .navbar-brand {
+    margin: 0px 20px;
+  }
+  #navbarNav {
+    flex-grow: 0;
+  }
+  #heart {
+    margin: 0px 10px;
+  }
+  .navbar-brand {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+}
+header {
+  border-width: 10px 0 0;
+  border-top-style: solid;
+  border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
+}
+
+main {
+  height: 1000px;
+  background-image: url("images/hero-bg.png");
+  color: white;
+  text-align: center;
+  line-height: 1.25;
+  .hero {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    padding-top: 150px;
+  }
+  h1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  .row {
+    margin: 0;
+  }
+  p {
+    padding: 0px 100px;
+    margin-bottom: 50px;
+  }
+  .size2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
+  button {
+    width: 250px;
+    margin: 0px 25px;
+  }
+  .signup {
+    border: none;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    max-width: 16rem;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background: #ffc329;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    color: #000000;
+  }
+  .pro {
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    max-width: 16rem;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background: #cb3837;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+}

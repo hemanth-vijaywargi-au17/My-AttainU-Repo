@@ -1,0 +1,13 @@
+.poke-dex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90vw;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, lightgrey, wheat);
+}

@@ -1,0 +1,28 @@
+CREATE DATABASE bank;
+
+CREATE TABLE account (
+	account_number INT,
+	holder_name VARCHAR(20),
+	account_type VARCHAR(20),
+	PRIMARY KEY (`account_number`)
+);
+
+CREATE TABLE customer (
+	customer_id INT,
+	customer_name VARCHAR(20),
+	customer_address TEXT,
+	PRIMARY KEY (`customer_id`)
+);
+
+CREATE TABLE employee (
+	employee_id INT,
+	employee_name VARCHAR(20),
+	designation TEXT,
+	PRIMARY KEY (`employee_id`)
+);
+
+INSERT INTO account VALUES(123456,"Hemanth","Savings");
+
+INSERT INTO customer VALUES(1465,"Jack","Beverly Hills");
+
+INSERT INTO employee VALUES(2456,"Dorsey","Full Stack Web Developer");

@@ -1,0 +1,2 @@
+Query : [{"$match":{"rated":"NOT RATED","year":2000}}], Time taken: 97 ms
+Query : [{"$match":{"$or":[{"genres":"Comedy","year":2016},{"imdb.rating":7}]}},{"$limit":11}], Time taken: 36 ms

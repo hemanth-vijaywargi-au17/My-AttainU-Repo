@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form id="sign-up-form">
+      <div id="heading">Sign Up</div>
+      <div class="sub-heading">
+        <span class="serial">1</span> Your Basic Info
+      </div>
+
+      <div class="label">Name:</div>
+      <input class="field" name="name" type="text" />
+
+      <div class="label">Email:</div>
+      <input class="field" name="email" type="email" />
+
+      <div class="label">Password:</div>
+      <input class="field" name="pass" type="password" />
+
+      <div class="label">Age:</div>
+      <div><input type="radio" name="age" value="Under13" />Under 13</div>
+      <div><input type="radio" name="age" value="Over13" />Over 13</div>
+
+      <div class="sub-heading"><span class="serial">2</span> Your Profile</div>
+
+      <div class="label">Bio:</div>
+      <textarea id="bio" class="field" name="bio"> </textarea>
+
+      <div class="label">Job Role:</div>
+      <select class="field" name="job">
+        <optgroup label="Web">
+          <option value="Front-End Developer">Front-End Developer</option>
+          <option value="PHP Developer">PHP Developer</option>
+          <option value="Python Developer">Python Developer</option>
+          <option value="Rails Developer">Rails Developer</option>
+          <option value="Web Designer">Web Designer</option>
+          <option value="Wordpress Developer">Wordpress Developer</option>
+        </optgroup>
+        <optgroup label="Mobile">
+          <option value="Android Developer">Android Developer</option>
+          <option value="IOS Developer">IOS Developer</option>
+          <option value="Mobile Designer">Mobile Designer</option>
+        </optgroup>
+        <optgroup label="Business">
+          <option value="Business Owner">Business Owner</option>
+          <option value="Freelancer">Freelancer</option>
+        </optgroup>
+      </select>
+
+      <div class="label">Interests:</div>
+      <div>
+        <input
+          type="checkbox"
+          name="interests"
+          value="Development"
+        />Development
+      </div>
+      <div><input type="checkbox" name="interests" value="Design" />Design</div>
+      <div>
+        <input type="checkbox" name="interests" value="Business" />Business
+      </div>
+
+      <input id="sign-up" type="submit" target="_blank" value="Sign Up" />
+    </form>
+  </body>
+</html>

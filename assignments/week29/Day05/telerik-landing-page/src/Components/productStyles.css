@@ -1,0 +1,54 @@
+.product {
+    width: 320px;
+    padding: 25px 35px;
+    text-align: center;
+    border: 1px solid hsl(0, 0%, 85%);
+    border-radius: 5px;
+    margin: 20px;
+    position: relative;
+}
+
+.product button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: hsl(140, 64%, 44%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    width: 130px;
+    height: 35px;
+}
+
+.product h2 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 6px;
+}
+
+.product h2 span {
+    font-size: 10px;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.header-parent {
+    position: absolute;
+    top: -10px;
+    display: flex;
+    justify-content: center;
+    width: 320px;
+}
+
+.header {
+    background-color: white;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    color: hsl(140, 64%, 44%);
+    width: fit-content;
+    padding: 0 15px;
+    height: fit-content;
+}

@@ -1,0 +1,15 @@
+.container-fluid{
+    background-color: hsl(284,38%,52%);
+    height: 100vh;
+}
+.card{
+    width: 400px;
+    height: fit-content;
+}
+.card-title{
+    background-color: hsl(0,0%,96%);
+}
+#submit-btn{
+    background-color: hsl(284,44%,46%);
+    color: white;
+}

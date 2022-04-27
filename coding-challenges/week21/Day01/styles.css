@@ -1,0 +1,48 @@
+.container {
+  height: 100vh;
+  background: #fef8f1;
+}
+
+.feedback {
+  width: 100%;
+  max-width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.2);
+}
+.feedback label {
+  text-align: center;
+  font-weight: bold;
+  padding: 0px 18px;
+}
+.feedback .emoji {
+  width: 110px;
+  height: 110px;
+  display: inline-flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.feedback .emoji img {
+  width: 45px;
+}
+.feedback .emoji:hover {
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.1);
+}
+.feedback .emoji:checked {
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.1);
+}
+.feedback .emoji p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: medium;
+}
+.feedback form,
+.feedback .form-group {
+  height: 100%;
+}
+.feedback .btn {
+  width: 140px;
+}/*# sourceMappingURL=styles.css.map */

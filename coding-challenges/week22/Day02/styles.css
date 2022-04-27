@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+h1 {
+  font-size: 70px;
+  font-weight: 100;
+  border-bottom: 1px solid grey;
+  width: fit-content;
+  margin-top: 0px;
+}
+
+#input_parent,
+#stack_box {
+  margin: 20px 0px;
+}
+#stack_box {
+  font-size: xx-large;
+}

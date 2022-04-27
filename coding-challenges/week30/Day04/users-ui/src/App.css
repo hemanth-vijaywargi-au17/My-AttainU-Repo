@@ -1,0 +1,9 @@
+.card {
+  width: 250px;
+}
+
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

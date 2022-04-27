@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Evaluation Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="parent">
+        <h1>Interview Evaluation Form</h1>
+        <p>This form should be filled by HR personnel in charge of the interview session</p>
+        <form action="/interview_infos" method="POST">
+
+            <div>
+                <label for="title">Title</label>
+                <select name="title" id="">
+                    <option value="mr.">Mr.</option>
+                    <option value="mr.">Mrs.</option>
+                    <option value="mr.">Ms.</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Candidate's name</label>
+                <input type="text" name="firstName" placeholder="first name">
+                <input type="text" name="lastName" placeholder="last name">
+            </div>
+
+            <div>
+                <label for="interviewDate">Interview Date</label>
+                <input type="date" name="interviewDate" id="">
+            </div>
+
+            <div>
+                <label for="interviewTime">Time</label>
+                <input type="time" name="interviewTime" id="">
+            </div>
+
+            <div>
+                <label for="candidatePosition">The position this candidate is coming in for</label>
+                <input type="text" name="candidatePosition" id="">
+            </div>
+
+            <div>
+                <label for="department">Department</label>
+                <input type="text" name="department" id="">
+            </div>
+
+            <div>
+                <label for="hiringManager">Hiring Manager</label>
+                <input type="text" name="hiringManager" id="">
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

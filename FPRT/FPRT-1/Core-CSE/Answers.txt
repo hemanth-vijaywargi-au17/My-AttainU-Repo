@@ -1,0 +1,214 @@
+Q1. List out different OOPS principles and explain with example. (10 marks)
+
+    There are Four Basic Principles of Object-Oriented Programming:
+    1. Encapsulation
+    2. Data Abstraction
+    3. Inheritance
+    4. Polymorphism
+
+    1) Encapsulation : 
+        The different objects inside of each program will try to communicate with each other automatically. 
+        If a programmer wants to stop objects from interacting with each other, they need to be encapsulated in individual classes.
+        Through the process of encapsulation, classes cannot change or interact with the specific variables and functions of an object.
+
+        Just like a pill "encapsulates" or contains the medication inside of its coating,
+        the principle of encapsulation works in a digital way to form a protective barrier around the information that separates it from the rest of the code. 
+        Programmers can replicate this object throughout different parts of the program or other programs.
+
+    2) Data Abstraction :
+        Abstraction is like an extension of encapsulation because it hides certain properties and methods from the outside code to make the interface of the objects simpler. 
+        Programmers use abstraction for several beneficial reasons. Overall, abstraction helps isolate the impact of changes made to the code so that if something goes wrong, 
+        the change will only affect the variables shown and not the outside code.
+
+    3) Inheritance :
+        Using this concept, programmers can extend the functionality of the code's existing classes to eliminate repetitive code. For instance, 
+        elements of HTML code that include a text box, select field and checkbox have certain properties in common with specific methods.
+
+        The main object is the superclass and all objects that follow it are subclasses. Subclasses can have separate elements while adding what they need from the superclass.
+
+    4) Polymorphism :
+        This technique meaning "many forms or shapes" allows programmers to render multiple HTML elements depending on the type of object. 
+        This concept allows programmers to redefine the way something works by changing how it is done or by changing the parts in which it is done. 
+        Terms of polymorphism are called overriding and overloading.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2. List out Layers of OSI Model and explain.  (10 marks)
+        OSI Model was developed with the following purposes in mind:
+                To create a platform that is common for hardware manufacturers and software developers. This promotes the design of networking products that correspond with each other over the network.
+                To assist network administrators by breaking down large data chunks into smaller segments. These are easier to comprehend, supervise and troubleshoot.
+
+        * Layer wise characteristics of OSI model are as follows :
+
+        1. Physical Layer :
+           --> Physical layer of the OSI model has the following characteristics:
+                1. Deals with transmitting raw bits of data over a physical medium.
+                2. It is hardware specific and is responsible for actual physical connection between a network medium and your computer.
+                3. Data is handled in the form of 1s and 0s. These are represented by light pulses, electric voltages or radio frequencies.
+                4. All devices functioning at this layer handle signaling.
+                5. Ethernet cables, Token ring networks , pin-outs, cable types, connectors are some of the components included in this layer.
+
+        2. Data Link Layer in OSI Model
+           --> Data link layer of OSI model has the following characteristics :
+                1. Enables data movement over a link from one device to another
+                2. Media access control.
+                3. Packet addressing.
+                4. Formatting the frame that is used to encapsulate data.
+                5. Error notification on physical layer.
+                6. It orders bits and packets to and from data segments. This ensuing result is called as frames. They contain data that are set in an orderly manner.
+                7. Ensure error-free communication between two devices by correct transmission of frames.
+
+                Data Link Layer is further divided into 2 components. They are termed as Media Access Control (MAC) and Logical Link Control (LLC) respectively. 
+                This division is mainly attributed to the complex structure of data link layer.
+
+        3. Network Layer in OSI Model
+           --> Network layer of OSI model has the following characteristics:
+                1. Responsible for establishing paths that are used for the transfer of data packets between network devices.
+                2. Traffic direction.
+                3. Addressing; Service and logical network addresses.
+                4. Routing.
+                5. Packet switching.
+                6. Controlling packet sequence.
+                7. Complete error detection; from sender to receiver.
+                8. Congestion control.
+                9. Gateway services.
+
+        4. Transport Layer in OSI Model
+           --> Transport layer in OSI-model has the following characteristics:
+                1. Responsible for message delivery between the networked hosts. Messages are fragmented and reassembled by this layer. It also controls the reliability of any given link.
+                2. Guaranteed delivery of data.
+                3. Name resolution.
+                4. Flow control.
+                5. Error detection and recovery.
+                6. TCP and UDP are the common transport protocols used at this layer.
+
+        5. Session Layer in OSI Model
+        --> Session layer of the OSI-model has the following characteristics:
+                1. Establish, monitor and terminate the communication session between applications.
+                2. Name lookup, security functions and data synchronization.
+                3. Placement of header information in a packet.
+                4. Determines whether the messages that are exchanged during a session are full or half duplex.
+
+        6. Presentation Layer in OSI Model
+        --> Presentation layer of the OSI model has the following characteristics:
+                1. This layer defines the syntax used by hosts in the network to communicate.
+                2. Data compression.
+                3. Encryption and decryption of data.
+                4. Data translation.
+                5. Interpreting graphics commands.
+                6. Protocol conversion.
+                7. Gateway services.
+
+        7. Application Layer in OSI Model
+        --> Application layer of OSI model has the following characteristics:
+                1. It works as an interface between the software and the network protocol on the computer. It provides services that are necessary to support the applications.
+                2. This layer provides interface for FTP applications, email and telnet.
+                3. Some common protocols in this layer include:
+                4. File Transfer Protocol (FTP).
+                5. Simple Mail Transfer Protocol (SMTP).
+                6. Internet Message Access Protocol (IMAP).
+                7. Hypertext Transfer Protocol (HTTP).
+                8. Post Office Protocol (POP).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3. Construct a binary tree using inorder and post order traversal given below.
+    Inorder Traversal: 9, 3, 15, 20, 7
+    Post Order Traversal: 9, 15, 7, 20, 3 (10 marks)
+    Note: You would need to explain all the steps
+
+        Inorder Traversal - Left Root Right
+        Post-order Traversal - Left Right Root
+
+        // Inorder Traversal Recursive-Function
+        def inorder(root, res=[]):
+                if root == None:
+                        return
+                inorder(root.left)
+                res.append(root.val)
+                inorder(root.right)
+                return res
+
+        // Inorder Traversal Recursive-Function
+        def postorder(root, res=[]):
+                if root == None:
+                        return
+                postorder(root.left)
+                postorder(root.right)
+                res.append(root.val)
+                return res
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q5. Explain virtual memory and swap memory.  (5 marks)
+
+    Virtual Memory :
+        Virtual memory is a feature of an operating system that enables a computer to be able to compensate shortages of physical memory by
+        transferring pages of data from random access memory to disk storage.
+
+        This process is done temporarily and is designed to work as a combination of RAM and space on the hard disk.
+
+        This means that when RAM runs low, virtual memory can move data from it to a space called a paging file. 
+        This process allows for RAM to be freed up so that a computer can complete the task.
+
+        Occasionally a user might be shown a message that says the virtual memory is running low, 
+        this means that either more RAM needs to be added, or the size of the paging file needs to be increased.
+
+     Swap Memory :
+        Swap memory is basically parts/pages of memory from the RAM (your high-speed primary memory) which is switching to use a file (or partition) 
+        dedicated on the hard-drive as memory space instead. So if the physical memory is full, you can use swap space for extra memory resources. 
+
+        It is useful if you have low memory on your machine, and if you do not want your machine to run out of memory in eg. high traffic environments.
+
+        Swap memory from the harddrive is slower than the RAM, so be careful as it can have a lot of influence on the performance on your machine. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q6. Explain any 3 Scheduling algorithms with an example. (10 marks)
+        CPU scheduling deals with the problem of deciding which of each process in the ready queue is to be allocated to the CPU.
+        There are many algorithms available for scheduling purpose each with its own advantages and disadvantages as well. 
+        CPU scheduling algorithms are important to make the effective use of CPU time.
+
+        Some most common CPU scheduling algorithms are as follows,
+                1. First Come First Serve (FCFS)
+                2. Round – Robin Scheduling
+                3. Shortest Job First (SJF)
+                
+        1. First Come First Serve (FCFS) :
+           -->  It is the simplest CPU scheduling algorithm. According to this scheme, a first process that request to CPU first is allocated the CPU first based on 
+                the rule “first come first serve”. 
+           -->  The implementation of FCFS policy is easily managed by FIFO queue. When a process enters into the ready queue, its PCB is linked at the end of the queue.
+           -->  When the CPU is free, it is allocated to the process at the head of queue.
+
+        2. Round – Robin Scheduling :
+           -->  Round – Robin scheduling is one of the oldest, simplest and most widely used algorithm. This algorithm is specially designed for time-sharing system and is similar to FCFS scheduling algorithm. 
+           -->  Major difference between FCFS and Round-Robin is that FCFS is non-preemptive while Round-Robin is of preemptive type.
+           -->  According to this policy, each process is allocated equal unit of time called a Time Quantum or Time Slice. It is generally from 10-100 millisecond. The ready queue is implemented as a circular queue.
+           -->  The CPU scheduler selects process  sequentially from the ready queue and allocate the CPU for 1 time quantum. To implement round-robbing scheduling, the ready queue is implemented as a FIFO queue. 
+           -->  New processes are added at the end of the ready queue.
+           -->  The CPU scheduler selects the 1st process from the ready queue and sets a timer to interrupt after 1 time quantum. One of the two things will happen
+
+        3. Shortest Job First (SJF) :
+           -->  In this algorithm, the process that has the shortest CPU burst time is selected first for the execution.
+           -->  When the CPU is available it is assign to the process that has the smallest next CPU burst.
+           -->  If two processes have the same length of CPU burst then FCFS policy is used to solve the tie.
+           -->  In fact more appropriate term for this algorithm would be the “Next Shortest CPU Burst Time First” because it allocates the CPU by examining the length of the next CPU burst of a process rather than its total length of a burst time.
+           -->  SJF algorithm may be either preemptive or non-preemptive.
+           -->  When a new process arrives having a short CPU burst time than the currently executing process; preemptive SJF algorithm will preempt the currently executing process, 
+                and allocates the CPU to the newly arrived process where as a non-preemptive SJF algorithm will allow the current running process to finish its CPU burst.
+           -->  Preemptive SJF scheduling is also referred to as Shortest Remaining Time Next (SRTN) scheduling.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q7. Explain deadlock in detail and its characteristics. (5 marks)
+        Deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. Similar situation occurs in operating systems when there are two or 
+        more processes hold some resources and wait for resources held by other(s).
+        Conditions for Deadlock- 
+            Mutual Exclusion, 
+            Hold and Wait, 
+            No preemption, &
+            Circular wait. 
+        These 4 conditions must hold simultaneously for the occurrence of deadlock.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./styles'); %>
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Add User</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="parent">
+        <table>
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" name="userName" /></td>
+            </tr>
+            <tr>
+                <td>Age :</td>
+                <td><input type="file" name="userImage" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" /></td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+
+</html>

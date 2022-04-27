@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 100;
+  border-bottom: 1px solid grey;
+  margin-top: 0px;
+}
+
+#input_parent,
+#queue_box {
+  margin: 20px 0px;
+}
+
+#queue_box {
+  font-size: xx-large;
+}
+
+#warning {
+  margin-bottom: 20px;
+}

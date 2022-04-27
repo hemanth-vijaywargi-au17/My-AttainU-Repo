@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-parent {
+    @apply flex justify-center mt-2 text-center text-white text-lg;
+}
+
+.form {
+    @apply flex flex-col gap-5 justify-center items-center bg-yt-100 p-8 py-6 rounded w-96;
+}
+
+.form-heading {
+    @apply text-4xl;
+}
+
+.form-input {
+    @apply text-black p-2 rounded w-full placeholder-gray-500;
+}
+
+.form-error-message {
+    @apply h-7 text-red-500;
+}
+
+.form-submit-btn {
+    @apply hover:bg-yt_red bg-red-700 p-2 px-4 rounded font-semibold;
+}
+
+.form-secondary-btn {
+    @apply ml-5 p-2 rounded hover:bg-hover;
+}
+
+.form-small-text {
+    @apply text-sm;
+}
+
+.navbar {
+    @apply px-28 flex justify-between items-center py-2 bg-yt-100 text-white font-bold;
+}
+
+.navbrand{
+    @apply flex items-center space-x-4;
+}
+.navbrand-icon {
+    @apply w-12 h-12 text-yt_red;
+}
+
+.navbrand-name{
+    @apply text-2xl font-bold
+}
+
+.navigation {
+    @apply flex items-center space-x-1;
+}
+
+.nav-link {
+    @apply hover:bg-hover px-3 py-2 rounded cursor-pointer;
+}

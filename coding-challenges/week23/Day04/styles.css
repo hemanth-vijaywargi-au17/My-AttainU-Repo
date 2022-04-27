@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+#parent > div {
+  margin: 15px 0px;
+}
+h1 {
+  font-size: 40px;
+}
+#parent {
+  background-color: black;
+  color: white;
+  padding: 20px 80px;
+  width: fit-content;
+}
+#result {
+  font-size: 25px;
+  height: 30px;
+  font-weight: 500;
+}

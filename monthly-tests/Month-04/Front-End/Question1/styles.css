@@ -1,0 +1,77 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato";
+}
+
+#main-box {
+  background-color: #eeecec;
+  text-align: center;
+  width: 60vw;
+}
+#main-box h1 {
+  font-weight: 200;
+}
+#main-box #price-parent {
+  display: flex;
+  justify-content: space-evenly;
+}
+#main-box #price-parent .price-box {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 30%;
+  margin-bottom: 30px;
+  background-color: white;
+}
+#main-box #price-parent .price-box:hover .plan-name {
+  background-color: #33cc70;
+  color: white;
+}
+#main-box #price-parent .price-box:hover input {
+  background-color: #33cc70;
+  color: white;
+}
+#main-box #price-parent .price-box .plan-name {
+  font-size: 30px;
+  background-color: #e3e3e3;
+  color: black;
+  padding: 20px;
+}
+#main-box #price-parent .price-box .plan-price {
+  background-color: whitesmoke;
+  padding: 20px;
+}
+#main-box #price-parent .price-box .plan-price .size1 {
+  font-size: 35px;
+}
+#main-box #price-parent .price-box .plan-price .size2 {
+  font-size: 20px;
+}
+#main-box #price-parent .price-box .features {
+  padding: 10px;
+}
+#main-box #price-parent .price-box .features:hover {
+  background-color: #e3e3e3;
+}
+#main-box #price-parent .price-box input {
+  border: 1px solid #33cc70;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  background-color: white;
+  font-size: 16px;
+  color: #33cc70;
+  padding: 10px 20px;
+  margin: 10px auto;
+}
+#main-box #price-parent #standard .plan-name {
+  background-color: #33cc70;
+  color: white;
+}
+#main-box #price-parent #standard input {
+  background-color: #33cc70;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */

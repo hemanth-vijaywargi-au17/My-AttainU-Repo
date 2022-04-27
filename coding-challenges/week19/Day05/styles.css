@@ -1,0 +1,41 @@
+body {
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+}
+header,
+footer {
+  height: 20vh;
+  background-color: dimgray;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#middle {
+    display: flex;
+    flex: row wrap;
+  }
+nav,
+main,
+aside {
+  height: 80vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  background-color: skyblue;
+}
+main {
+  flex-grow: 1;
+  background-color: lightgray;
+}
+aside {
+  background-color: tomato;
+}

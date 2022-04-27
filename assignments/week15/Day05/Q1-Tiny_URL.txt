@@ -1,0 +1,51 @@
+Q-1 ) Design Tiny Url and explain all the steps and estimations.
+(5 marks)
+
+1.Requirements
+Before you jump into the solution always clarify all the assumptions 
+you’re making at the beginning of the interview. Ask questions to 
+identify the scope of the system. This will clear the initial doubt, 
+and you will get to know what are the specific detail interviewer 
+wants to consider in this service. 
+
+>Given a long URL, the service should generate a shorter and unique 
+alias of it.
+>When the user hits a short link, the service should redirect to the 
+original link.
+>Links will expire after a standard default time span.
+>The system should be highly available. This is really important to 
+consider because if the service goes down, all the URL redirection 
+will start failing.
+>URL redirection should happen in real-time with minimal latency.
+>Shortened links should not be predictable.
+>Let’s start by making some assumptions about the traffic 
+(for scalability) and the length of the URL. 
+
+2.traffic
+Let’s assume our service has 30M new URL shortenings per month. 
+Let’s assume we store every URL shortening request (and associated 
+shortened link) for 5 years. For this period the service will generate 
+about 1.8 B records. 
+
+30 million * 5 years * 12 months = 1.8B
+
+4. Data Capacity Modeling
+Discuss the data capacity model to estimate the storage of the system. 
+We need to understand how much data we might have to insert in our 
+system. Think about the different columns or attributes that will be 
+stored in our database and calculate the storage of data for five 
+years. Let’s make the assumption given below for different attributes… 
+
+>Consider average long URL size of 2KB ie for 2048 characters.
+>Short URL size: 17 Bytes for 17 character
+>created_at- 7 bytes
+>expiration_length_in_minutes -7 bytes
+
+The above calculation will give a total of 2.031KB per shortened URL 
+entry in the database. If we calculate the total storage then for 30 
+M active users total size = 30000000 * 2.031 = 60780000 KB = 60.78 GB 
+per month. In a Year of 0.7284 TB and in 5 years 3.642 TB of data.
+
+We need to think about the reads and writes that will happen on our 
+system for this amount of data. This will decide what kind of database 
+(RDBMS or NoSQL) we need to use.

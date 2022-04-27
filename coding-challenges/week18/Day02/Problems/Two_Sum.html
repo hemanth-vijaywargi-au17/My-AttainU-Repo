@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Two Sum</title>
+</head>
+
+<body>
+    <h1>Two Sum Problem</h1>
+    <p>
+    Time Complexity : O(n) , 
+    Space Complexity : O(n)
+    </p>
+    <pre>
+    <code>
+    def two_sum(nums,target):
+        dict1=dict()
+        for idx,val in enumerate(nums):
+            if val in dict1:
+                return [dict1[val],idx]
+            else:
+                dict1[target-val]=idx
+    </code>
+    </pre>
+</body>
+
+</html>

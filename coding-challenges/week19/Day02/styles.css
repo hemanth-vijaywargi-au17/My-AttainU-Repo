@@ -1,0 +1,53 @@
+body {
+  margin: 0px;
+}
+nav,
+footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: hsl(234, 9%, 90%);
+  background-color: hsl(120, 6%, 97%);
+  color: hsl(234, 9%, 43%);
+  text-align: center;
+}
+nav {
+  top: 0px;
+}
+footer {
+  bottom: 0px;
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+td {
+  width: 70px;
+}
+td:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+table {
+  height: inherit;
+  margin-left: 40px;
+}
+#name {
+  font-size: 22px;
+  width: 170px;
+}
+
+/* Main Section */
+main {
+  margin: 100px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: hsl(61, 99%, 59%);
+}

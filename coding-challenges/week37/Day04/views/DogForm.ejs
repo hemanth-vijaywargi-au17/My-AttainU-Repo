@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./styles'); %>
+    <title>Dog Form</title>
+</head>
+
+<body>
+    <h1>Enter Your Dog's Info</h1>
+    <form action="/formSubmit" method="post">
+        <table>
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+                <td>Age :</td>
+                <td><input type="number" name="age" /></td>
+            </tr>
+            <tr>
+                <td>Breed :</td>
+                <td><input type="text" name="breed" /></td>
+            </tr>
+            <tr>
+                <td>Height :</td>
+                <td><input type="number" name="height" /></td>
+            </tr>
+            <tr>
+                <td>Weight :</td>
+                <td><input type="number" name="weight" /></td>
+            </tr>
+            <tr>
+                <td>OwnerName :</td>
+                <td><input type="text" name="ownerName" /></td>
+            </tr>
+        </table>
+        <input type="submit" />
+    </form>
+</body>
+
+</html>

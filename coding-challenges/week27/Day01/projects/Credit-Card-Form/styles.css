@@ -1,0 +1,114 @@
+body {
+  background-color: #dceefa;
+}
+
+#card-form {
+  position: relative;
+  margin: 160px 0px 30px;
+  padding-top: 120px;
+  font-size: small;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-face {
+  width: 333px;
+  height: 210px;
+  background-color: black;
+  position: absolute;
+  border-radius: 15px;
+  top: -120px;
+  background-image: url("images/card-background.jpg");
+  background-size: contain;
+  padding: 20px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#visa {
+  height: 25px;
+}
+
+#visa2 {
+  height: 25px;
+  transform: rotateY(180deg);
+}
+
+#chip {
+  height: 45px;
+}
+
+#numberBox {
+  height: 29.6px;
+  box-sizing: content-box;
+  width: 90%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+}
+#numberBox:hover {
+  border-color: white;
+}
+
+#card-info {
+  color: white;
+  font-size: small;
+  letter-spacing: 1px;
+}
+#card-info .col {
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+#card-info .col:hover {
+  border-color: white;
+}
+
+.muted {
+  color: grey;
+}
+
+.big {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+#card-name,
+#card-date {
+  height: 22.4px;
+}
+
+#card-box {
+  transition: all 1.5s ease;
+  z-index: 1;
+}
+
+#card-box2 {
+  transition: all 1.5s ease;
+  z-index: 0;
+}
+#card-box2 #black-bar {
+  width: 100%;
+  height: 29.6px;
+  background-color: black;
+}
+#card-box2 #white-bar {
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  padding: 3px;
+  font-size: medium;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+#card-box2 .small {
+  text-align: end;
+  transform: rotateY(180deg);
+  color: white;
+  margin-left: 10px;
+}/*# sourceMappingURL=styles.css.map */

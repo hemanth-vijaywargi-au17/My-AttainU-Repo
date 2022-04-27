@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container d-flex justify-content-center align-items-center">
+    <div id="main-box" class="d-flex flex-wrap row">
+
+        <div class="summary col-5">
+            <div class="sum">Payment Summary</div>
+            <div class="row">
+                <div class="box1 col-7">
+                    Electronics
+                    <div class="time-text">2017 Feb 10 at 10:30 PM</div>
+                </div>
+                <div class="box2 col-4">
+                    CAF
+                </div>
+            </div>
+            <div class="row">
+                <div class="box1 col-7">
+                    Food
+                    <div class="time-text">2017 Feb 10 at 10:30 PM</div>
+                </div>
+                <div class="box2 col-4">
+                    CAF
+                </div>
+            </div>
+            <div class="row">
+                <div class="box1 col-7">
+                    Grocery
+                    <div class="time-text">2017 Feb 10 at 10:30 PM</div>
+                </div>
+                <div class="box2 col-4">
+                    CAF
+                </div>
+            </div>
+            <div class="row">
+                <div class="box1 col-7">
+                    Accessories
+                    <div class="time-text">2017 Feb 10 at 10:30 PM</div>
+                </div>
+                <div class="box2 col-4">
+                    CAF
+                </div>
+            </div>
+    
+            <div class="checkout d-flex flex-column justify-content-center px-4">
+                <div class="time-text">Total Price</div>
+                <div class="price">$ 523.65</div>
+                <div class="time-text">Price includes all taxes</div>
+            </div>
+        </div>
+
+        <div class="method col-7 d-flex flex-column">
+            <h2 class="text-danger">Payment Method</h2>
+
+            <div class="d-flex justify-content-around">
+                <img class="img-fluid" src="images/visa.jpg">
+                <img class="img-fluid" src="images/paypal.jpg"> 
+            </div>
+
+            <div>
+                <label class="pay">Name on Card</label><br>
+                <input type="text" name="holdername" placeholder="John Smith">
+            </div>
+            
+
+            <div class="row">
+                <div class="col-8 col-md-6"> 
+                    <label class="pay">Card Number</label> 
+                    <input type="text" name="cardno" id="cr_no" placeholder="0000-0000-0000-0000" minlength="19" maxlength="19"> 
+                </div>   
+                <div class="col-4 col-md-6"> 
+                    <label class="pay">CVV</label> 
+                    <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> 
+                </div>   
+            </div>
+                    
+            <div class="row">
+                        
+                <div class="col-md-12"> 
+                    <label class="pay">Expiration Date</label> 
+                </div> 
+                <div class="col-md-12"> 
+                    <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> 
+                </div>
+            </div>
+                    
+            <div class="row">
+                <div class="col-md-6"> 
+                    <input id="submit" type="submit" value="MAKE A PAYMENT &nbsp; -->" class="btn btn-info"> 
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

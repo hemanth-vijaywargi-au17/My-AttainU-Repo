@@ -1,0 +1,85 @@
+Q1.Describe LRU Cache in Brief.
+Ans=    LRU cache
+            Computers have cache memory that temporarily stores the most frequently used data. It’s a great way to get the data that is used most often because the retrieval process is super fast. Computers also have memory 
+            but it’s more expensive to retrieve data from there. However, cache memory is limited in size and there needs to be a way to manage what data needs to be removed from the cache in order to store new data. 
+            That’s where LRU cache comes in. It’s a cache replacement algorithm that removes the least recently used data in order to make room for new data.
+            Implementation:-
+            Using a Queue: Most recently used items would be present at the front of the queue and least recently used will be present at the back. We can implement said queue using a Doubly-Linked List.
+            Using a Hash Table: An ordered Hast Table where a key here represents a hash with page number, and a value represents the address of the corresponding queue node.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2.What happens when you type www.attainu.com in your browser?
+Ans=	1.You enter the URL in the browser.
+	Suppose you want to visit the website of www.attainu.com. So you type attainu.com in the address bar of your browser. When you type any URL you basically want to reach the server 
+	where the website is hosted.
+	2. The browser looks for the IP address of the domain name in the DNS(Domain Name Server).DNS is a list of URLs and their corresponding IP address just like the telephone 
+	book has phone numbers. corresponding to the names of the people. We can access the website directly by typing the IP address but imagine remembering a group of numbers to visit 
+	any website. So, we only remember the name of the website and the mapping of the name with the IP address is done by the DNS.
+	-> The DNS checks at the following places for the IP address:-
+	a. Check Browser Cache: 
+		The browser maintains a cache of the DNS records for some fixed amount of time. It is the first place to run a DNS query.
+	b. Check OS Cache: 
+		If the browser doesn't contain the cache then it requests to the underlying Operating System as the OS also maintains a cache of the DNS records.
+	c. Router Cache: 
+		If your computer doesn't have the cache, then it searches the routers as routers also have the cache of the DNS records.
+	d. ISP(Internet Service Provider) Cache: 
+		If the IP address is not found at the above three places then it is searched at the cache that ISP maintains of the DNS records. If not found here also, then ISP’s DNS 
+		recursive search is done. In "DNS recursive search", a DNS server initiates a DNS query that communicates with several other DNS servers to find the IP address.
+		So, the domain name which you entered got converted into a DNS number. Suppose the above-entered domain name attinu.com has an IP address 100.95.224.1. 
+		So, if we type https://100.85.224.1 in the browser we can reach the website.
+	3. The Browser initiates a TCP connection with the server.When the browser receives the IP address, it will build a connection between the browser and the server using the 
+	internet protocol. The most common protocol used is TCP protocol. The connection is established using a three-way handshake. 
+	>> It is a three-step process.
+	Step 1 (SYN): As the client wants to establish a connection so it sends an SYN(Synchronize Sequence Number) to the server which informs the server that the client wants to start a 
+		      communication.
+	Step 2 (SYN + ACK): If the server is ready to accept connections and has open ports then it acknowledges the packet sent by the server with the SYN-ACK packet.
+	Step 3 (ACK): In the last step, the client acknowledges the response of the server by sending an ACK packet. Hence, a reliable connection is established and data transmission can 
+			start now.
+	4. The browser sends an HTTP request to the server.The browser sends a GET request to the server asking for attinu.com webpage. It will also send the cookies that the browser 
+	has for this domain. Cookies are designed for websites to remember stateful.
+	Sample Example of HTTP Request: 
+		Now let’s put it all together to form an HTTP request.The HTTP request below will fetch abc.html page from the web server running on attainu.com
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3.What is NAT and ARP? Describe briefly.
+Ans=  NAT:
+        Network Address Translation (NAT) is the process where a network device, usually a firewall, assigns a public address to a computer (or group of computers) 
+        inside a private network. The main use of NAT is to limit the number of public IP addresses an organization or company must use, for both economy and security 
+        purposes.
+
+        The most common form of network translation involves a large private network using addresses in a private range (10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255, or 192.168.0 0 to 192.168.255.255). 
+        The private addressing scheme works well for computers that only have to access resources inside the network, like workstations needing access to file servers and printers. Routers inside the private network 
+        can route traffic between private addresses with no trouble. However, to access resources outside the network, like the Internet, these computers have to have a public address in order for responses to their 
+        requests to return to them. This is where NAT comes into play.
+      ARP:
+        The ARP cache contains entries that map IP addresses to MAC addresses. A static ARP table contains entries that are user-configured.
+        The ARP cache entries are generally for devices that are directly attached to the Layer 3 device.
+        An exception is an ARP entry for an interface-based static IP route that goes to a destination that is one or more router hops away. For this type of entry, the MAC address is either 
+        the destination device MAC address or the MAC address of the router interface that answered an ARP request on behalf of the device, using proxy ARP.
+    
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q4.Describe deadlock characteristics.
+Ans=    Deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. Similar situation occurs in operating systems when there are two or 
+        more processes hold some resources and wait for resources held by other(s).
+        Conditions for Deadlock- 
+            Mutual Exclusion, 
+            Hold and Wait, 
+            No preemption, &
+            Circular wait. 
+        These 4 conditions must hold simultaneously for the occurrence of deadlock.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q5. Describe Pagination in brief.
+Ans=    Pagination is a sequence of pages which are connected and have similar content.
+        It is important to note that even when the content on a section of a page is split into distinct pages, we will still define that as pagination.
+        For example on your news website you are showing many different articles in a sequential order and so you have jump to page buttons on the bottom to 
+        navigate to next article.
+        The navigation to next content can be in the form of numbered buttons, named buttons or a simple "Load More" button.
+        If you are looking to present large amounts of data on your site, like a blog, or series of charts or graphs that show information about the same data set, 
+        you definitely need to split your graphs across pages for readability.
+        It is also a good practice in terms of SEO.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,120 @@
+Q1.Write an implementation LRU cache in python ?
+Ans=	LRU cache
+	Cache is a part of computer memory that is used for storing the frequently used data temporarily. But the size of the cache memory is fixed, 
+	and there exists the management requirement where it can remove the unwanted data and store new data there. Here, LRU comes into the role. 
+	Thus, LRU is a cache replacement algorithm used for freeing the memory space for the new data by removing the least recently used data.
+	Implementation:-
+	Queue: Using a doubly-linked list, one can implement a queue where the max size of the queue will be equal to the cache size (the total number of frames that exist). It is quite simple to find that the most recently used pages are present near the front end, and on the other hand, we can find the least recently used pages near the rear end of the doubly linked list.
+	Hash: A key here represents a hash with page number, and a value represents the address of the corresponding queue node.
+	Example:
+		Let’s take an example of a cache that has a capacity of 4 elements. We cache elements 1, 2, 3 and 4.
+		It represents the cache state after first access of all four elements. We now need to cache another element “5”.
+		so now we have 2,3,4,5.
+		In LRU cache, we evict the least recently used element (in this case “1”) in case a new element needs to be cached. Now “2” is next in line to be evicted if a new element needs to be cached.
+		Let’s see what happens when “2” is accessed again.
+		so now we have 3,4,5,2.
+		Now “3” becomes the next in line to be evicted from the cache ans so on.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2.What happens when you type www.attainu.com in your browser?
+Ans=	1.You enter the URL in the browser.
+	Suppose you want to visit the website of www.attainu.com. So you type attainu.com in the address bar of your browser. When you type any URL you basically want to reach the server 
+	where the website is hosted.
+	2. The browser looks for the IP address of the domain name in the DNS(Domain Name Server).DNS is a list of URLs and their corresponding IP address just like the telephone 
+	book has phone numbers. corresponding to the names of the people. We can access the website directly by typing the IP address but imagine remembering a group of numbers to visit 
+	any website. So, we only remember the name of the website and the mapping of the name with the IP address is done by the DNS.
+	-> The DNS checks at the following places for the IP address:-
+	a. Check Browser Cache: 
+		The browser maintains a cache of the DNS records for some fixed amount of time. It is the first place to run a DNS query.
+	b. Check OS Cache: 
+		If the browser doesn't contain the cache then it requests to the underlying Operating System as the OS also maintains a cache of the DNS records.
+	c. Router Cache: 
+		If your computer doesn't have the cache, then it searches the routers as routers also have the cache of the DNS records.
+	d. ISP(Internet Service Provider) Cache: 
+		If the IP address is not found at the above three places then it is searched at the cache that ISP maintains of the DNS records. If not found here also, then ISP’s DNS 
+		recursive search is done. In "DNS recursive search", a DNS server initiates a DNS query that communicates with several other DNS servers to find the IP address.
+		So, the domain name which you entered got converted into a DNS number. Suppose the above-entered domain name attinu.com has an IP address 100.95.224.1. 
+		So, if we type https://100.85.224.1 in the browser we can reach the website.
+	3. The Browser initiates a TCP connection with the server.When the browser receives the IP address, it will build a connection between the browser and the server using the 
+	internet protocol. The most common protocol used is TCP protocol. The connection is established using a three-way handshake. 
+	>> It is a three-step process.
+	Step 1 (SYN): As the client wants to establish a connection so it sends an SYN(Synchronize Sequence Number) to the server which informs the server that the client wants to start a 
+		      communication.
+	Step 2 (SYN + ACK): If the server is ready to accept connections and has open ports then it acknowledges the packet sent by the server with the SYN-ACK packet.
+	Step 3 (ACK): In the last step, the client acknowledges the response of the server by sending an ACK packet. Hence, a reliable connection is established and data transmission can 
+			start now.
+	4. The browser sends an HTTP request to the server.The browser sends a GET request to the server asking for attinu.com webpage. It will also send the cookies that the browser 
+	has for this domain. Cookies are designed for websites to remember stateful.
+	Sample Example of HTTP Request: 
+		Now let’s put it all together to form an HTTP request.The HTTP request below will fetch abc.html page from the web server running on attainu.com
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3.What is the difference between private and public ip.
+Ans=
+			private                                                   				public
+1.	Scope-		Private IP address scope is local to present network.					Public IP address scope is global.
+2.	Locate-		Private IP Address can be located using ipconfig command.				Public IP Address needs to be searched on search engine like google.
+3.	Communication-	Private IP Address is used to communicate within the network.				Public IP Address is used to communicate outside the network.
+4.	Format-		Private IP Addresses differ in a uniform manner.					Public IP Addresses differ in varying range.
+5.	Provider-	Local Network Operator creates private IP addresses using network operating system.	ISP, Internet Service Provider controls the public IP address.
+6.	Cost-		Private IP Addresses are free of cost.							Public IP Address comes with a cost.
+7.	Example-	Private IP Address is like 192.168.11.50.						Public IP Address is like 17.5.7.8.
+8.	Range-		Private IP Address range:								Except private IP Addresses, rest IP addresses are public.
+			10.0.0.0 – 10.255.255.255,
+			172.16.0.0 – 172.31.255.255,
+			192.168.0.0 – 192.168.255.255	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q4.Describe deadlock characteristics.
+Ans=
+	It happens when two or more processes require some resource to complete their execution that is held by the other process.
+        i) mutual exclusion- a resources which is held by one process at a time.
+        ii) hold and wait- a process that holds many resources and even request for more resources from other processes. which are holding them.
+	iii) No preemption- process which can only release a resources voluntarily.
+	iv) circular wait- process gets token to execute the resources for some time then releases the token.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q5. Explain in brief.
+    a. Swap memory.
+    b. Context switching
+    c. IPv4 address
+    d. IPV6 address
+Ans=
+	a)swap memory-
+        Memory swapping is a computer technology that enables an operating system to provide more memory to a running application or process than is available in physical random access memory (RAM).
+	When the physical system memory is exhausted, the operating system can opt to make use of memory swapping techniques to get additional memory.
+	Memory swapping is among the multiple techniques for memory management in modern systems. Physical memory alone is sometimes not sufficient, 
+	which is why there are different ways of augmenting RAM in a system with these additional options.
+
+	b)Context switching-
+	Context Switching involves storing the context or state of a process so that it can be reloaded when required and execution can be resumed from the same point as earlier. 
+	This is a feature of a multitasking operating system and allows a single CPU to be shared by multiple processes.
+
+	c)ipv4 address-
+	IPv4 is a version 4 of IP. It is a current version and the most commonly used IP address. It is a 32-bit address written in four numbers separated by 'dot', i.e., periods. 
+	This address is unique for each device.	
+	i)IPv4 has 32-bit address length
+	ii)It Supports Manual and DHCP address configuration
+	iii)It can generate 4.29×109 address space
+	iv)Security feature is dependent on application
+	v)Address representation of IPv4 is in decimal
+	vi)In IPv4 checksumfield is available
+	vii)In IPv4 Encryption and Authentication facility not provided
+	viii)IPv4 has header of 20-60 bytes.
+
+	d)ipv6 address-
+	Pv4 produces 4 billion addresses, and the developers think that these addresses are enough, but they were wrong. IPv6 is the next generation of IP addresses. 
+	i)IPv6 has 128-bit address length
+	ii)It supports Auto and renumbering address configuration
+	iii)Address space of IPv6 is quite large it can produce 3.4×1038 address space
+	iv)IPSEC is inbuilt security feature in the IPv6 protocol
+	v)Address Representation of IPv6 is in hexadecimal
+	vi)In IPv6 checksumfield is not available
+	vii)In IPv6 Encryption and Authentication are provided
+	viii)IPv6 has header of 40 bytes fixed 
+	
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

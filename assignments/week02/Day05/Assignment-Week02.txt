@@ -1,0 +1,130 @@
+	Assignment - Week02 :
+
+What are the default data types in python? What is typecasting in python?
+Give two examples each of typecasting between each of the following types:
+a. string to boolean
+b. integer to boolean
+c. boolean to string
+d. string to integer
+
+# Default Data Types in Python
+
+	1. String  - any word , sentence ,group of characters or numbers enclosed in double quotes.
+		      examples: "Hello, World"  ,"Hi" , "21"
+
+	2. Integer - All numbers without decimal points.
+  		      examples: 18 ,3, 7
+
+	3. Float   - Numbers with decimal places.
+		      examples: 98.7 ,500.50 ,3.1475896
+
+	4. Boolean - A boolean just has two possible values TRUE or FALSE ,it is used to test conditions.
+
+# Typecasting
+
+	It is the process of converting a variable from one datatype to another.The current datatype of our variable can be checked
+	with the type() function/command. It is an inbuilt function in python.
+
+	In order to convert the datatype of our variable we use the following commands :
+
+	a. Convert to Integer - int(variable_name)
+	b. Convert to float - float(variable_name)
+	c. Convert to string - str(variable_name)
+	a. Convert to Boolean - bool(variable_name)
+
+
+	--> Examples of Type Conversion in Python
+		
+		(A) String to Boolean 
+		        
+			# Example-1 :
+
+			a = "Python is Easy"
+
+			print(a, type(a))	# Datatype is String
+
+			a = bool(a)
+
+			print(a, type(a))	# Datatype is now Boolean
+
+			# Example-2 :
+				
+			a =""
+				
+			print(a, type(a))	# Datatype is String
+
+			a = bool(a)
+
+			print(a, type(a))	# Datatype is now Boolean
+
+
+		(B) Integer to Boolean
+
+			# Example-1 :
+
+			b = 42
+		
+			print(b, type(b))	# Datatype is int
+
+			b = bool(b)
+
+			print(b, type(b))	# Datatype is now Boolean
+
+			# Example-2 :
+
+			b = 0
+		
+			print(b, type(b))	# Datatype is int
+
+			b = bool(b)
+
+			print(b, type(b))	# Datatype is now Boolean
+
+		(C) Boolean to String
+
+			# Example-1 :
+
+			c = True
+	
+			print(c, type(c))	# Datatype is Boolean
+
+			c= str(c)
+
+			print(c, type(c))	# Datatype is now string
+
+			# Example-2 :
+
+			c = False
+	
+			print(c, type(c))	# Datatype is Boolean
+
+			c= str(c)
+
+			print(c, type(c))	# Datatype is now string
+
+
+		(D) String to Integer
+
+			# Example-1 :
+
+			d = "147500"
+
+			print(d, type(d))	# Datatype is String
+
+			d = int(d)
+
+			print(d, type(d))	# Datatype is now int
+
+			# Example-2 :
+
+			d = "-5"
+
+			print(d, type(d))	# Datatype is String
+
+			d = int(d)
+
+			print(d, type(d))	# Datatype is now int
+			
+	
+
+

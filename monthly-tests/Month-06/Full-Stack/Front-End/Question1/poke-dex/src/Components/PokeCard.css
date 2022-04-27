@@ -1,0 +1,44 @@
+.poke-card{
+    background-color: hsl(127,88%,92%);
+    width: 150px;
+    height: fit-content;
+    padding: 10px;
+    border-radius:15px ;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    margin: 10px;
+    box-shadow: -1px -1px 5px 3px rgba(0,0,0,0.26);
+    -webkit-box-shadow: -1px -1px 5px 3px rgba(0,0,0,0.26);
+    -moz-box-shadow: -1px -1px 5px 3px rgba(0,0,0,0.26);
+}
+.poke-card .imgBox{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 30px;
+}
+.poke-card img{
+    transform: scale(1.5);
+    position: absolute;
+    top: 20px;
+}
+.poke-id{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 5px;
+}
+.poke-name{
+    font-size: larger;
+    font-weight: 600;
+}
+.poke-type{
+    font-size: 13px;
+}
+
+.poke-card >div{
+    margin: 5px 0;
+}

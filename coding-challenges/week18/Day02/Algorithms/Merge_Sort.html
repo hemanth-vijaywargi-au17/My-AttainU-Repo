@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Merge Sort</title>
+</head>
+
+<body>
+    <h1>Merge Sort</h1>
+    <p>Time Complexity : O(nlogn)</p>
+    <pre>
+    <code>
+    def merge(a, b):
+
+        n = len(a)
+        m = len(b)
+
+        p1 = 0
+        p2 = 0
+
+        c = []
+
+        while p1 < n and p2 < m:
+            if a[p1] < b[p2]:
+                c.append(a[p1])
+                p1 += 1
+            else:
+                c.append(b[p2])
+                p2 += 1
+
+        while p1 < n:
+            c.append(a[p1])
+            p1 += 1
+
+        while p2 < m:
+            c.append(b[p2])
+            p2 += 1
+
+        return c
+
+
+    def merge_sort(arr):
+        if len(arr) == 1:
+            return arr
+
+        mid = len(arr)//2
+        a = merge_sort(arr[:mid])
+        b = merge_sort(arr[mid:])
+
+        return merge(a, b)
+    </code>
+</pre>
+</body>
+
+</html>

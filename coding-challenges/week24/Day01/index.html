@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamming Distance</title>
+    <script defer src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="parent" class="container">
+        <div class="row justify-content-center">
+            <div id="header" class="col-12">
+                <h1 class="mb-4">Hamming Distance</h1>
+                <p>
+                    The Hamming Distance between two strings of equal length is the number of positions 
+                    at which the corresponsindg sumbols are different. E.g: The hamming distance between 
+                    strings "helloworld" and "worldhello" is 8.
+                </p>
+            </div>
+            
+            <div id="main-box" class="p-4 shadow m-5  col-md-8 col-lg-6 col-xl-4">
+                <p class="fw-bold">Enter Two Strings Of Equal length Seperated By A Comma(e.g:"boy,toy")</p>
+                <label for="input" class="fs-4 fw-bold">String:</label>
+                <input type="text" id="input" class="form-control mt-3">
+                <button id="submit" type="submit" class="btn mt-4">Submit</button>
+                <p class="fs-6 fw-bold mt-4">Hamming Distance</p>
+                <div id="message" class="fs-4 fw-bold px-3"></div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

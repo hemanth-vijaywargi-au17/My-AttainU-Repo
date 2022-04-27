@@ -1,0 +1,27 @@
+body {
+  background-color: hsl(0, 0%, 84%);
+}
+#parent {
+  padding: 10px 30px;
+}
+#header {
+  background-color: hsl(162, 61%, 14%);
+  text-align: center;
+  color: white;
+  padding: 20px 10px;
+}
+#main-box {
+  border-radius: 10px;
+  background-color: white;
+}
+#submit {
+  background-color: hsl(162, 61%, 14%);
+  color: white;
+  width: 100px;
+}
+#message {
+  height: 40px;
+  border: 1px solid#ced4da;
+  width: 300px;
+  border-radius: 5px;
+}

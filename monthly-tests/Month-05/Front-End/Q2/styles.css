@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#parent {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#blueBox {
+    background-color: hsl(246, 58%, 41%);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+#blueBox td {
+    padding: 10px;
+    letter-spacing: 0.5px;
+}
+
+#blueBox input {
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+    width: 150px;
+}
+
+#calculate {
+    background-color: hsl(358, 79%, 54%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    align-self: center;
+    margin-top: 20px;
+    font-size: large;
+    width: 120px;
+}
+
+#calculate:hover {
+    background-color: hsl(358, 79%, 44%);
+}
+
+.pink {
+    color: hsl(340, 56%, 57%);
+}
+
+.green {
+    color: hsl(180, 33%, 54%);
+}

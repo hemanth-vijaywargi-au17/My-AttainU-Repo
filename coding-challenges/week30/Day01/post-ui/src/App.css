@@ -1,0 +1,48 @@
+body {
+  padding: 0 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container>div {
+  width: 500px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  height: 70vh;
+  overflow: scroll;
+}
+
+.post-list li {
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.post-list li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.post-details {
+  border: 1px solid black;
+  height: fit-content;
+  padding: 20px;
+}
+
+.post-details .title {
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,25 @@
+#chessboard {
+  width: 500px;
+  height: 500px;
+  border: 5px solid black;
+}
+#chessboard .rows {
+  height: 12.5%;
+}
+#chessboard .rows:nth-child(odd) .cols:nth-child(odd) {
+  background-color: white;
+}
+#chessboard .rows:nth-child(odd) .cols:nth-child(even) {
+  background-color: black;
+}
+#chessboard .rows:nth-child(even) .cols:nth-child(odd) {
+  background-color: black;
+}
+#chessboard .rows:nth-child(even) .cols:nth-child(even) {
+  background-color: white;
+}
+#chessboard .cols {
+  width: 12.5%;
+  height: 100%;
+  float: left;
+}/*# sourceMappingURL=styles.css.map */

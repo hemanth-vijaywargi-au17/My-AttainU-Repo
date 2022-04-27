@@ -1,0 +1,88 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato';
+}
+
+#main-box{
+    background-color: hsl(0,5%,93%);
+    text-align: center;
+    width: 60vw;
+    h1{
+        font-weight: 200;
+    }
+
+    #price-parent{
+        display: flex;
+        justify-content: space-evenly;
+
+        .price-box{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 30%;
+            margin-bottom: 30px;
+            background-color: white;
+
+            &:hover{
+                .plan-name{
+                    background-color: hsl(144,60%,50%);
+                    color: white;
+                }
+                input{
+                    background-color: hsl(144,60%,50%);
+                    color: white;
+                }
+            }
+
+            .plan-name{
+                font-size: 30px;
+                background-color: hsl(0,0%,89%);
+                color: black;
+                padding: 20px;
+            }
+
+            .plan-price{
+                background-color: hsl(0,0%,96%);
+                padding: 20px;
+                .size1{
+                    font-size: 35px;
+                }
+                .size2{
+                    font-size: 20px;
+                }
+            }
+
+            .features{
+                padding: 10px;
+                &:hover{
+                    background-color: hsl(0,0%,89%);
+                }
+            }
+
+            input{
+                border: 1px solid hsl(144,60%,50%);
+                width: fit-content;
+                border-radius: 30px;
+                background-color: white;
+                font-size: 16px;
+                color: hsl(144,60%,50%);
+                padding: 10px 20px;
+                margin: 10px auto;
+            }
+        }
+
+        #standard{
+            .plan-name{
+                background-color: hsl(144,60%,50%);
+                color: white;
+            }
+            input{
+                background-color: hsl(144,60%,50%);
+                color: white;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,66 @@
+.btn-default {
+  background-color: hsl(0, 0%, 100%); /* white */
+  color: black;
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px lightgray solid;
+}
+.btn-primary {
+  background-color: hsl(210, 53%, 54%); /* #4d8ac8 */
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px;
+}
+.btn-success {
+  background-color: hsl(121, 40%, 55%); /* #5db95f */
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px;
+}
+.btn-info {
+  background-color: hsl(195, 64%, 63%); /* #64bfdd; */
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px;
+}
+.btn-warning {
+  background-color: hsl(35, 81%, 63%); /* #edae55 */
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px;
+}
+.btn-danger {
+  background-color: hsl(1, 62%, 58%); /* #d65452 */
+  color: white;
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px;
+}
+.btn-default:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+.btn-primary:hover {
+  background-color: hsl(210, 53%, 44%);
+}
+.btn-success:hover {
+  background-color: hsl(121, 40%, 45%);
+}
+.btn-info:hover {
+  background-color: hsl(195, 64%, 53%);
+}
+.btn-warning:hover {
+  background-color: hsl(35, 81%, 53%);
+}
+.btn-danger:hover {
+  background-color: hsl(1, 62%, 48%);
+}

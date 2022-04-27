@@ -1,0 +1,246 @@
+Q1. List out different OOPS principles and explain ? 
+
+    There are Four Basic Principles of Object-Oriented Programming:
+    1. Encapsulation
+    2. Data Abstraction
+    3. Inheritance
+    4. Polymorphism
+
+    1) Encapsulation : 
+        The different objects inside of each program will try to communicate with each other automatically. 
+        If a programmer wants to stop objects from interacting with each other, they need to be encapsulated in individual classes.
+        Through the process of encapsulation, classes cannot change or interact with the specific variables and functions of an object.
+
+        Just like a pill "encapsulates" or contains the medication inside of its coating,
+        the principle of encapsulation works in a digital way to form a protective barrier around the information that separates it from the rest of the code. 
+        Programmers can replicate this object throughout different parts of the program or other programs.
+
+    2) Data Abstraction :
+        Abstraction is like an extension of encapsulation because it hides certain properties and methods from the outside code to make the interface of the objects simpler. 
+        Programmers use abstraction for several beneficial reasons. Overall, abstraction helps isolate the impact of changes made to the code so that if something goes wrong, 
+        the change will only affect the variables shown and not the outside code.
+
+    3) Inheritance :
+        Using this concept, programmers can extend the functionality of the code's existing classes to eliminate repetitive code. For instance, 
+        elements of HTML code that include a text box, select field and checkbox have certain properties in common with specific methods.
+
+        The main object is the superclass and all objects that follow it are subclasses. Subclasses can have separate elements while adding what they need from the superclass.
+
+    4) Polymorphism :
+        This technique meaning "many forms or shapes" allows programmers to render multiple HTML elements depending on the type of object. 
+        This concept allows programmers to redefine the way something works by changing how it is done or by changing the parts in which it is done. 
+        Terms of polymorphism are called overriding and overloading.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2. List out Layers of TCP/IP Model and explain ?
+
+    There are 4 Layers in TCP/IP Model :
+    1. Network Access Layer
+    2. Internet Layer
+    3. Transport Layer
+    4. Application Layer
+
+    Layer-(1) Network Access Layer :
+        Network Access Layer is the first layer of the four-layer TCP/IP model. Network Access Layer defines details of how data is physically sent through the network, 
+        including how bits are electrically or optically signaled by hardware devices that interface directly with a network medium, such as coaxial cable, optical fiber, 
+        or twisted pair copper wire.
+
+        The protocols/standards included in Network Access Layer are Ethernet, Token Ring, FDDI, X.25, Frame Relay etc.
+    
+    Layer-(2) Internet Layer :
+        Internet Layer is the second layer of the four-layer TCP/IP model. The position of Internet layer is between Network Access Layer and Transport layer. 
+        Internet layer pack data into data packets known as IP datagrams, which contain source and destination address (logical address or IP address) information 
+        that is used to forward the datagrams between hosts and across networks. The Internet layer is also responsible for routing of IP datagrams.
+
+        Internet layer allow hosts to insert packets into network and have them delivered to the destination, on the same network or on another remote network. 
+        At the destination side data packets may appear in a different order than they were sent. It is the job of the higher layers to rearrange them in order to deliver 
+        them to proper network applications operating at the Application layer.
+
+        The main protocols included at Internet layer are IP (Internet Protocol), ICMP (Internet Control Message Protocol), ARP (Address Resolution Protocol),
+        RARP (Reverse Address Resolution Protocol) and IGMP (Internet Group Management Protocol).
+    
+    Layer-(3) Transport Layer :
+        Transport Layer is the third layer of the four-layer TCP/IP model. The position of the Transport layer is between Application layer and Internet layer. 
+        The purpose of Transport layer is to permit devices on the source and destination hosts to carry on a conversation. Transport layer defines the level of service 
+        and status of the connection used when transporting data.
+
+        The main protocols included at Transport layer are TCP (Transmission Control Protocol) and UDP (User Datagram Protocol)
+    
+    Layer-(4) Application Layer :
+        Application layer is the top-most layer of four-layer TCP/IP model. Application layer is placed on the top of the Transport layer. 
+        Application layer defines TCP/IP application protocols and how host programs interface with Transport layer services to use the network.
+
+        Application layer includes all the higher-level protocols like DNS (Domain Naming System), HTTP (Hypertext Transfer Protocol), Telnet, SSH, 
+        FTP (File Transfer Protocol), TFTP (Trivial File Transfer Protocol), SNMP (Simple Network Management Protocol), SMTP (Simple Mail Transfer Protocol) , 
+        DHCP (Dynamic Host Configuration Protocol), X Windows, RDP (Remote Desktop Protocol) etc.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3. Construct a binary tree by using postorder and inorder sequences given below.
+    Inorder: N, M, P, O, Q
+    Postorder: N, P, Q, O, M 
+
+           M
+         /   \
+        N     O
+             /  \
+            P    Q
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q5. Explain LRU cache and its implementation by taking some examples and explaining all steps. 
+
+    A Least Recently Used (LRU) Cache organizes items in order of use, allowing you to quickly identify which item hasn't been used for the longest amount of time.
+    Picture a clothes rack, where clothes are always hung up on one side. To find the least-recently used item, look at the item on the other end of the rack.
+    Under the hood, an LRU cache is often implemented by pairing a doubly linked list with a hash map.
+
+    We use two data structures to implement an LRU Cache. 
+    
+    Queue which is implemented using a doubly linked list. The maximum size of the queue will be equal to the total number of frames available (cache size). 
+    The most recently used pages will be near front end and least recently pages will be near the rear end. 
+    
+    A Hash with page number as key and address of the corresponding queue node as value.
+    When a page is referenced, the required page may be in the memory. If it is in the memory, we need to detach the node of the list and bring it to the front of the queue. 
+    If the required page is not in memory, we bring that in memory. In simple words, we add a new node to the front of the queue and update the corresponding node address in the hash. 
+    If the queue is full, i.e. all the frames are full, we remove a node from the rear of the queue, and add the new node to the front of the queue.
+
+    Example Code:-
+    class LRUCache:
+
+    def _init_(self, capacity):
+        self.capacity = capacity
+        self.cache = set()
+        self.cache_vals = LinkedList()
+
+    def set(self, value):
+        node = self.get(value)
+        if node == None:
+        if(self.cache_vals.size >= self.capacity):
+            self.cache_vals.insert_at_tail(value)
+            self.cache.add(value)
+            self.cache.remove(self.cache_vals.get_head().data)
+            self.cache_vals.remove_head()
+        else:
+            self.cache_vals.insert_at_tail(value)
+            self.cache.add(value)
+        
+        else:
+        self.cache_vals.remove(value)
+        self.cache_vals.insert_at_tail(value)
+    
+    def get(self, value):
+        if value not in self.cache:
+        return None
+        else:
+        i = self.cache_vals.get_head()
+        while i is not None:
+            if i.data == value:
+            return i
+            i = i.next
+
+    def printcache(self):
+        node = self.cache_vals.get_head()
+        while node != None :
+        print(str(node.data) + ", ")
+        node = node.next
+        
+    cache1 = LRUCache(4)
+    cache1.set(10)
+    cache1.printcache()
+
+    cache1.set(15)
+    cache1.printcache()
+
+    cache1.set(20)
+    cache1.printcache()
+
+    cache1.set(25)
+    cache1.printcache()
+
+    cache1.set(30)
+    cache1.printcache()
+
+    cache1.set(20)
+    cache1.printcache()
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q6. Explain virtual memory?
+
+    Virtual memory is a feature of an operating system that enables a computer to be able to compensate shortages of physical memory by
+    transferring pages of data from random access memory to disk storage.
+
+    This process is done temporarily and is designed to work as a combination of RAM and space on the hard disk.
+
+    This means that when RAM runs low, virtual memory can move data from it to a space called a paging file. 
+    This process allows for RAM to be freed up so that a computer can complete the task.
+
+    Occasionally a user might be shown a message that says the virtual memory is running low, 
+    this means that either more RAM needs to be added, or the size of the paging file needs to be increased.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q7. Explain Deadlock and its characteristics.
+    In a deadlock, processes never finish executing, and system resources are tied up, preventing other jobs from starting.
+	Characteristics :
+	i) Mutual Exclusion-A resource can only be shared in mutually exclusive manner. It implies, if two process cannot use the same resource at the same time.
+	ii) Hold and Wait-A process waits for some resources while holding another resource at the same time.
+	iii) No preemption-The process which once scheduled will be executed till the completion. No other process can be scheduled by the scheduler meanwhile.
+	iv) Circular Wait-All the processes must be waiting for the resources in a cyclic manner so that the last process is waiting for the resource which is being held by the first process.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q8. Explain NAT and ARP protocol ?
+
+    To access the Internet, one public IP address is needed, but we can use a private IP address in our private network. 
+    The idea of NAT is to allow multiple devices to access the Internet through a single public address. To achieve this, the translation of private IP address to a 
+    public IP address is required. Network Address Translation (NAT) is a process in which one or more local IP address is translated into one or more Global IP address and 
+    vice versa in order to provide Internet access to the local hosts. Also, it does the translation of port numbers i.e. masks the port number of the host with another port number, 
+    in the packet that will be routed to the destination. It then makes the corresponding entries of IP address and port number in the NAT table. NAT generally operates on router or firewall. 
+    
+    Network Address Translation (NAT) working – 
+    Generally, the border router is configured for NAT i.e the router which has one interface in local (inside) network and one interface in the global (outside) network. 
+    When a packet traverse outside the local (inside) network, then NAT converts that local (private) IP address to a global (public) IP address. 
+    When a packet enters the local network, the global (public) IP address is converted to a local (private) IP address. If NAT run out of addresses, i.e., no address is left in 
+    the pool configured then the packets will be dropped and an Internet Control Message Protocol (ICMP) host unreachable packet to the destination is sent.
+
+    ARP 
+    Address Resolution Protocol (ARP) is an important protocol of the network layer in the OSI model, which helps find the MAC (Media Access Control) address given the system's 
+    IP address. The ARP's main task is to convert the 32-bit IP address (for IPv4) to a 48-bit MAC address. 
+
+    This protocol is mostly used to determine the hardware (MAC) address of a device from an IP address. It is also used when one device wants to communicate with some other device 
+    on a local network. The full form of ARP is Address Resolution Protocol. 
+
+    If two computers want to communicate with each other, they need MAC address. Every computer will have an ARP table. If C1 wants to communicate with C2, it will check its 
+    ARP table for the C2’s ARP Table. If the address is not present, the C1 will broadcast, everyone in the network meaning, C1 will ask all the computers in the network. 
+    Once C2 confirms then C1 is connected with C2. 
+
+    Address Resolution Protocol (ARP) is a procedure for mapping a dynamic Internet Protocol address (IP address) to a permanent physical machine address in a local area network (LAN). 
+    The physical machine address is also known as a Media Access Control or MAC address. 
+
+    The job of the ARP is essentially to translate 32-bit addresses to 48-bit addresses and vice-versa. This is necessary because in IP Version 4 (IPv4), the most common level of 
+    Internet Protocol (IP) in use today, an IP address is 32-bits long, but MAC addresses are 48-bits long. ARP works between network layers 2 and 3 of the Open Systems Interconnection 
+    model (OSI model). The MAC address exists on layer 2 of the OSI model, the data link layer, while the IP address exists on layer 3, the network layer. 
+
+    ARP can also be used for IP over other LAN technologies, such as token ring, fiber distributed data interface (FDDI) and IP over ATM. In IPv6, which uses 128-bit addresses,
+    ARP has been replaced by the Neighbor Discovery protocol.
+
+    How ARP works –
+    When a new computer joins a LAN, it is assigned a unique IP address to use for identification and communication. When an incoming packet destined for a host machine on a 
+    particular LAN arrives at a gateway, the gateway asks the ARP program to find a MAC address that matches the IP address. A table called the ARP cache maintains a record of 
+    each IP address and its corresponding MAC address. 
+
+    All operating systems in an IPv4 Ethernet network keep an ARP cache. Every time a host requests a MAC address in order to send a packet to another host in the LAN, it checks 
+    its ARP cache to see if the IP to MAC address translation already exists. If it does, then a new ARP request is unnecessary. If the translation does not already exist, 
+    then the request for network addresses is sent and ARP is performed. 
+
+    ARP broadcasts a request packet to all the machines on the LAN and asks if any of the machines know they are using that particular IP address. When a machine recognizes the 
+    IP address as its own, it sends a reply so ARP can update the cache for future reference and proceed with the communication. Host machines that don't know their own IP address 
+    can use the Reverse ARP (RARP) protocol for discovery. 
+
+    An ARP cache size is limited and is periodically cleansed of all entries to free up space; in fact, addresses tend to stay in the cache for only a few minutes. 
+    Frequent updates allow other devices in the network to see when a physical host changes their requested IP address. In the cleaning process, unused entries are deleted 
+    as well as any unsuccessful attempts to communicate with computers that are not currently powered on.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

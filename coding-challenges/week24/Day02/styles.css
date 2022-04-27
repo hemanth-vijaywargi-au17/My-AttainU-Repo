@@ -1,0 +1,14 @@
+body {
+  background-color: wheat;
+}
+#parent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#img {
+  height: 400px;
+  margin: 20px 0px;
+  border-radius: 10px;
+}

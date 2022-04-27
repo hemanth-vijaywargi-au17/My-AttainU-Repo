@@ -1,0 +1,32 @@
+body {
+  background-color: hsl(0, 0%, 80%);
+}
+#parent {
+  background-color: whitesmoke;
+  padding: 25px;
+  border-radius: 5px;
+}
+#parent > * {
+  margin-top: 30px;
+}
+h3 {
+  color: goldenrod;
+}
+.input {
+  text-align: center;
+  font-size: larger;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.input:focus-visible {
+  outline-color: goldenrod;
+  outline-style: auto;
+  outline-width: 1px;
+}
+#swap {
+  background-color: goldenrod;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: large;
+}

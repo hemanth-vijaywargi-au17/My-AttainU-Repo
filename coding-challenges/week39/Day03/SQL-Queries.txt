@@ -1,0 +1,48 @@
+  -- CC Queries :
+
+  /* 1. Find all actors whose last names contain the letters LI. Also, order the rows
+      by last name and first name, in that order. */
+  SELECT * 
+  FROM actor 
+  WHERE last_name LIKE "%L%" OR last_name LIKE "%I%" 
+  ORDER BY last_name, first_name
+
+  /* 2. . List the last names of actors, as well as how many actors have that last name. */
+  SELECT last_name, COUNT(*) as actor_count 
+  FROM actor 
+  GROUP BY last_name
+
+  /* 3. The actor ‘HARPO WILLIAMS’ was accidentally entered in the actor table as
+        ’GROUCHO WILLIAMS’. Write a query to fix the record. */
+  UPDATE actor 
+  SET first_name = 'GROUCHO' 
+  WHERE first_name = 'HARPO' AND last_name = 'WILLIAMS'
+
+  /* 4. Use JOIN to display the first and last names, as well as the address, of each
+        staff member. Use the tables staff and address.*/
+   SELECT staff.first_name, staff.last_name, address.address 
+   FROM staff INNER JOIN address 
+   ON staff.address_id = address.address_id
+
+  /* 5. Use JOIN to display the total amount rung up by each staff member in August
+        of 2005. Use tables staff and payment. */
+   SELECT CONCAT(staff.first_name," ",staff.last_name) AS staff_name, SUM(payment.amount) AS total_amount_made_in_august_2005 
+   FROM staff INNER JOIN payment 
+   ON staff.staff_id = payment.staff_id 
+   WHERE payment_date LIKE '2005-08-%' 
+   GROUP BY staff_name
+	
+  /* 6. How many copies of the film Hunchback Impossible exist in the inventory
+        system? Write a query to find the same. */
+  SELECT film.film_id, film.title, COUNT(*) AS copies_in_stock 
+  FROM film INNER JOIN inventory
+  ON film.film_id = inventory.film_id
+  WHERE title = 'Hunchback Impossible'
+
+  /* 7. Using the tables payment and customer and the JOIN command, list the total
+        paid by each customer. List the customers alphabetically by last name. */
+   SELECT CONCAT(customer.first_name," ",customer.last_name) AS customer_name, SUM(payment.amount) AS total_amount_paid_by_customer
+   FROM customer INNER JOIN payment
+   ON customer.customer_id = payment.customer_id
+   GROUP BY customer_name
+   ORDER BY last_name 

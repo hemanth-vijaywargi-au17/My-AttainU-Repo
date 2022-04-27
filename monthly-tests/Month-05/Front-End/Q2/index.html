@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="parent">
+        <h1><span class="pink">Tip </span><span class="green">Calculator</span></h1>
+        <div id="blueBox">
+            <table>
+                <tr>
+                    <td><label for="amount">Bill Amount:</label></td>
+                    <td><input type="number" id="amount"></td>
+                </tr>
+                <tr>
+                    <td><label for="percentage">Percentage Tip:</label></td>
+                    <td><input type="number" id="percentage"></td>
+                </tr>
+                <tr>
+                    <td><label for="tip">Tip Amount:</label></td>
+                    <td><input type="text" id="tip" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="total">Total:</label></td>
+                    <td><input type="text" id="total" disabled></td>
+                </tr>
+            </table>
+            <button id="calculate">Calculate</button>
+        </div>
+    </div>
+</body>
+
+</html>

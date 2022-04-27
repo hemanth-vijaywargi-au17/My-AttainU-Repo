@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: hsl(180, 9%, 5%);
+}
+
+#main-box {
+  background-color: hsl(180, 9%, 15%);
+  text-align: center;
+  width: 60vw;
+  padding: 10px;
+}
+
+#main-box h1 {
+  font-weight: 200;
+  color: hsl(69, 2%, 74%);
+}
+
+#main-box #price-parent {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#main-box #price-parent .price-box {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 270px;
+  margin-bottom: 30px;
+  color: hsl(69, 2%, 74%);
+  background-color: black;
+  position: relative;
+}
+
+#main-box #price-parent .price-box:hover .plan-name {
+  background-color: hsl(324, 60%, 49%);
+  color: black;
+}
+
+#main-box #price-parent .price-box:hover input {
+  background-color: hsl(324, 60%, 49%);
+  color: black;
+}
+
+#main-box #price-parent .price-box .plan-name {
+  font-size: 30px;
+  background-color: hsl(0, 0%, 20%);
+  padding: 30px 0;
+}
+
+#main-box #price-parent .price-box .plan-price {
+  background-color: hsl(0, 0%, 15%);
+  padding: 10px;
+  padding-top: 100px;
+}
+
+#main-box #price-parent .price-box .plan-price .size1 {
+  font-size: 35px;
+}
+
+#main-box #price-parent .price-box .plan-price .size2 {
+  font-size: 20px;
+}
+
+#main-box #price-parent .price-box .features {
+  padding: 20px;
+  background-color: black;
+}
+
+#main-box #price-parent .price-box .features:hover {
+  background-color: hsl(324, 60%, 49%);
+  color: black;
+  font-weight: bold;
+  border-left: 10px solid hsl(0, 0%, 20%);
+}
+
+#main-box #price-parent .price-box input {
+  border: 1px solid hsl(324, 60%, 49%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  background-color: black;
+  font-size: 16px;
+  color: hsl(324, 60%, 49%);
+  padding: 15px 20px;
+  margin: 15px auto;
+}
+
+#main-box #price-parent :nth-child(2) .plan-name {
+  background-color: hsl(324, 60%, 49%);
+  color: black;
+}
+
+#main-box #price-parent :nth-child(2) input {
+  background-color: hsl(324, 60%, 49%);
+  color: black;
+}
+
+.slanted {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: absolute;
+  width: 100%;
+}

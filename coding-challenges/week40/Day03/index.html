@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sockets</title>
+</head>
+
+<body>
+    <h1>Web Sockets</h1>
+    <h2>Count : <span id="countBox"></span></h2>
+    <button id="incrementBtn">Increment</button>
+    <script>
+        // Grabbing DOM Elements
+        const countBox = document.getElementById('countBox')
+        const incrementBtn = document.getElementById('incrementBtn')
+
+        // Creating WebSocket Connection
+        const wsConnection = new WebSocket('ws://localhost:5001')
+
+        // On Connection
+        wsConnection.addEventListener('open', () => {
+            console.log('Connected to the Web Socket Server!')
+            wsConnection.send('Hi Server!')
+        })
+
+        // On Connection Closing
+        wsConnection.addEventListener('close', () => {
+            console.log('Disconnected from the Web Socket Server!')
+        })
+
+        // On Message from Server
+        wsConnection.addEventListener('message', (message) => {
+            countBox.innerHTML = message.data
+        })
+
+        // Send Increment Message to Server onClick
+        incrementBtn.addEventListener('click', () => {
+            wsConnection.send("increment")
+        })
+    </script>
+</body>
+
+</html>

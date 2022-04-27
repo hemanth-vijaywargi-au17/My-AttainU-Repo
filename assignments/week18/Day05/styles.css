@@ -1,0 +1,63 @@
+#sign-up-form {
+  width: 300px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f7f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #676d71;
+}
+#heading {
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+}
+.sub-heading {
+  margin: 25px 0px;
+  font-size: 18px;
+}
+.serial {
+  padding: 5px 12px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #61d082;
+  color: white;
+  font-weight: bold;
+}
+.label {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.field {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: hsl(188, 17%, 92%);
+  color: inherit;
+}
+.field:hover {
+  background-color: hsl(188, 17%, 90%);
+}
+.field:focus-visible {
+  outline: 1px solid #61d082;
+  background-color: hsl(188, 17%, 90%);
+}
+
+#bio {
+  height: 40px;
+}
+#sign-up {
+  width: 100%;
+  padding: 10px;
+  margin: 25px auto;
+  border: none;
+  border-radius: 3px;
+  background-color: hsl(137, 54%, 59%);
+  color: white;
+  font-size: 15px;
+}
+#sign-up:hover {
+  background-color: hsl(137, 54%, 49%);
+}
